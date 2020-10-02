@@ -21,6 +21,9 @@ expose:
 jenkins:
   Servers:
     Global: {}
+istio-prod:
+  istio:
+    enabled: true
 service1:
   hpa:
     enabled: true
