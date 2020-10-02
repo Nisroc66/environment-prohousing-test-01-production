@@ -13,17 +13,18 @@ expose:
   - --v
   - 4
   config:
-    domain: 46.137.191.103.nip.io
+    domain: prohousing.no
     exposer: Ingress
     http: "true"
     tlsacme: "false"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
-jenkins:
-  Servers:
-    Global: {}
 istio-prod:
   istio:
     enabled: true
+jenkins:
+  Servers:
+    Global: {}
+prow: {}
 service1:
   hpa:
     enabled: true
@@ -38,4 +39,3 @@ service2:
     enabled: true
     gateway: jx-istio-prod
     path: /service2
-prow: {}
